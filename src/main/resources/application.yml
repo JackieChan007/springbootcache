@@ -1,0 +1,17 @@
+server:
+  port: 8083
+spring:
+  redis:
+    database: 0
+    host: 192.168.9.132
+    port: 6379
+    password:
+  #spring cache的配置
+  cache:
+    redis:
+      # Entry expiration. By default the entries never expired.单位为：Duration
+      time-to-live: 5m
+      #使用前綴
+      use-key-prefix: true
+      #使用的前綴的值：这里可以根据不同的模板进行区分，方便查看缓存中的值
+      key-prefix: WST_ADMIN_
